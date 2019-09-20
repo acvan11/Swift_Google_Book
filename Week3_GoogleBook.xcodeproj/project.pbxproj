@@ -23,6 +23,7 @@
 		331D44192334911600DC14A0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D44182334911600DC14A0 /* DetailViewController.swift */; };
 		331D441D2334944A00DC14A0 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D441C2334944A00DC14A0 /* ViewController+Extension.swift */; };
 		331D441F23349ED300DC14A0 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D441E23349ED300DC14A0 /* FavoriteViewController.swift */; };
+		33899F3D2334B7C60021A445 /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F3C2334B7C60021A445 /* FavoriteCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		331D44182334911600DC14A0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		331D441C2334944A00DC14A0 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		331D441E23349ED300DC14A0 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		33899F3C2334B7C60021A445 /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				331D43AC232FE7CA00DC14A0 /* BookTableCell.swift */,
+				33899F3C2334B7C60021A445 /* FavoriteCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				331D43AD232FE7CA00DC14A0 /* BookTableCell.swift in Sources */,
 				331D43A3232FDC7D00DC14A0 /* BookAPI.swift in Sources */,
 				331D4383232F1FAA00DC14A0 /* Week3_GoogleBook.xcdatamodeld in Sources */,
+				33899F3D2334B7C60021A445 /* FavoriteCollectionCell.swift in Sources */,
 				331D43B0232FEE5500DC14A0 /* ViewModel.swift in Sources */,
 				331D44192334911600DC14A0 /* DetailViewController.swift in Sources */,
 				331D441D2334944A00DC14A0 /* ViewController+Extension.swift in Sources */,

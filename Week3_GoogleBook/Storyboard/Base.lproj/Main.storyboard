@@ -126,7 +126,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Tvn-r6-Fmz">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Tvn-r6-Fmz" customClass="FavoriteCollectionCell" customModule="Week3_GoogleBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -155,8 +155,16 @@
                                             <constraint firstItem="Efh-Ka-0U8" firstAttribute="leading" secondItem="Tvn-r6-Fmz" secondAttribute="leading" constant="20" id="pPC-up-uvQ"/>
                                             <constraint firstItem="Efh-Ka-0U8" firstAttribute="top" secondItem="Tvn-r6-Fmz" secondAttribute="top" constant="10" id="qBJ-cn-fY5"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="BookImage" destination="Efh-Ka-0U8" id="Tdb-fk-lWd"/>
+                                            <outlet property="bookAuthor" destination="fvz-MT-wmg" id="b0U-Dq-ruc"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ps6-93-ZgU" id="g13-qE-l7L"/>
+                                    <outlet property="delegate" destination="Ps6-93-ZgU" id="oMU-E5-D8Q"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
