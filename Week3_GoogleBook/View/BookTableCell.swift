@@ -19,7 +19,10 @@ class BookTableCell: UITableViewCell {
     var book: Book! {
         didSet {
             bookTitleLabel.text = book.volumeInfo.title
-            bookauthorLabel.text = book.volumeInfo.subtitle
+            bookauthorLabel.text = book.volumeInfo.authors[0]
+            book.getImage { [weak self] img in
+                self?.bookImage.image = img
+            }
         }
     }
     override func prepareForReuse() {

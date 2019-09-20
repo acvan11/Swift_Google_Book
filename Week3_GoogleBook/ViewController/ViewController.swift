@@ -29,14 +29,15 @@ class ViewController: UIViewController {
             
             self.viewModel = userInfo["ViewModel"]!
             
-            self.searchController.dimsBackgroundDuringPresentation = false
-            self.searchController.searchBar.placeholder = "search the book.."
-            self.searchController.searchBar.delegate = self
-            self.navigationItem.hidesSearchBarWhenScrolling = false
-            self.navigationItem.searchController = self.searchController
-            self.definesPresentationContext = true
-            
         }
+        
+        self.searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.searchBar.placeholder = "search the book.."
+        self.searchController.searchBar.delegate = self
+        
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.navigationItem.searchController = self.searchController
+        self.definesPresentationContext = true
         
         
     }
@@ -50,7 +51,7 @@ extension ViewController: UISearchBarDelegate {
         
         viewModel.get(search: searchText)
         
-        navigationItem.searchController?.isActive = false
+       // navigationItem.searchController?.isActive = false
         
     }
     
@@ -76,11 +77,15 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+//        return UITableView.automaticDimension
+        return 112
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let book = viewModel.books[indexPath.row]
+        viewModel.book = book
+        goToDetail(with: viewModel)
     }
     
 }

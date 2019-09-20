@@ -26,6 +26,8 @@ final class ViewModel {
         
     }
     
+    var book: Book!
+    
     func get(search: String) {
         BookService.shared.getBooks(for: search) {[weak self] bookss in
             self?.books = bookss
