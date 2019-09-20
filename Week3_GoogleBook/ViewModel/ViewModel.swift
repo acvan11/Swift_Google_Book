@@ -20,10 +20,9 @@ final class ViewModel {
     weak var delegate: ViewModelDelegate?
     weak var favdelegate: FavoriteDelegate?
     
-    static let shared = ViewModel()
-    private init() {}
+    init() {}
     
-    var books = [Book]() {
+    var books = [FavBook]() {
         didSet {
             //let userInfo: [String:ViewModel] = ["ViewModel":self]
             //NotificationCenter.default.post(name: Notification.Name.BookNotification, object: nil, userInfo: userInfo)
@@ -32,13 +31,13 @@ final class ViewModel {
         
     }
     
-    var favbooks = [Book]() {
+    var favbooks = [FavBook]() {
         didSet {
             favdelegate?.update()
         }
     }
     
-    var book: Book!
+    var book: FavBook!
     
     func get(search: String) {
         BookService.shared.getBooks(for: search) {[weak self] bookss in
@@ -52,16 +51,15 @@ final class ViewModel {
     func getFav() {
         CoreManager.shared.load() { [weak self] bookss in
             self?.favbooks = bookss
-            print("Total favorite books: \(favbooks.count)")
             
         }
     }
     
-    func favorite(book: Book) {
+    func favorite(book: FavBook) {
         CoreManager.shared.save(book)
     }
     
-    func unfav(book: Book) {
+    func unfav(book: FavBook) {
         CoreManager.shared.save(book)
     }
 }

@@ -16,10 +16,10 @@ class BookTableCell: UITableViewCell {
     
     static let identifier = "BookTableCell"
     
-    var book: Book! {
+    var book: FavBook! {
         didSet {
-            bookTitleLabel.text = book.volumeInfo.title
-            bookauthorLabel.text = book.volumeInfo.authors[0]
+            bookTitleLabel.text = book.title
+            bookauthorLabel.text = book.author
             book.getImage { [weak self] img in
                 self?.bookImage.image = img
             }

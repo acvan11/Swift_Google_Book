@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias BookHandler = ([Book]) -> Void
+typealias BookHandler = ([FavBook]) -> Void
 
 final class BookService {
     
@@ -30,8 +30,12 @@ final class BookService {
             
             if let data = dat {
                 do {
-                    let bookResponse = try JSONDecoder().decode(BookResponse.self, from: data)
-                    let books = bookResponse.books
+                    let decoder = JSONDecoder()
+                    decoder.userInfo = [.context: CoreManager.shared.context]
+                    let response = try decoder.decode(/*[FavBook]*/BookResponse.self,
+                                                                   from: data)
+                    // let books = bookResponse.books
+                    let books = response.books
                     print("Print out array of books")
                     print(books)
                     completion(books)

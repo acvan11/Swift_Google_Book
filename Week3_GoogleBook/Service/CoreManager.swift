@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 let core = CoreManager.shared
+typealias FavBookHandler = ([FavBook]) -> Void
 
 final class CoreManager {
     
@@ -36,7 +37,8 @@ final class CoreManager {
     }()
     
     
-    //MARK: Save
+    //MARK: Save'
+    /*
     func save(_ book: Book) {
         
         let entity = NSEntityDescription.entity(forEntityName: "FavBook", in: context)!
@@ -50,6 +52,10 @@ final class CoreManager {
         print("save this book")
         saveContext()
         
+    }
+ */
+    func save(_ book: FavBook) {
+        saveContext()
     }
     
     //MARK: Delete
@@ -78,25 +84,50 @@ final class CoreManager {
     }
     
     //MARK: Load
-    func load() -> [Book] {
+    func load(completion: @escaping FavBookHandler) -> [FavBook] {
         
         let fetchRequest = NSFetchRequest<FavBook>(entityName: "FavBook")
         
-        var fav = [Book]()
+        do {
+            let favBooks: [FavBook] = try context.fetch(fetchRequest)
+            return favBooks
+        }
+        catch {
+            
+        }
+        return []
+    }
+    /*
+        var fav: [Book] = [Book]()
         
         do {
-           let favBooks = try context.fetch(fetchRequest)
-//            for core in favBooks {
-//                fav.append(Book(from: core))
-//  }
+            let favBooks: [FavBook] = try context.fetch(fetchRequest)
+            for core in favBooks {
+                // Book init needs Decoder
+                // 'core' is a FavBook
+                // objective:
+                // turn FavBook ~> Book
+                // FavBook? ~> Core Data Entity Model
+                // Book? ~> Another Custom Model
+                // Solutions:
+                // 1. Adapt FavBook into a Book
+                // 2. Only use one Model
+                
+                // 2. Decodable Core Data.
+                // A. Decoder - Decodable
+                // B. NSManagedObjectContext - Core Data
+                fav.append(Book.init(from: <#T##Decoder#>))
+            }
+            completion(fav)
             
         } catch {
             print("Couldn't Fetch Fact: \(error.localizedDescription)")
+            completion([])
         }
         
         return fav
     }
-    
+    */
     
     //MARK: Helpers
     

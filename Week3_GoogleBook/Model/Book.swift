@@ -8,9 +8,21 @@
 
 import Foundation
 import UIKit
+/*
+BookResponse
+-> [Book] - "items"
+    -> VolumeInfo
+        -> authors[] -> turn into String author
+        -> desciption -> desc
+        -> ImageLinks:
+                ->smallThumbnail -> image
+                ->thumbnail -> bigImage
+        -> title
+ */
 
 struct BookResponse: Decodable {
-    let books: [Book]
+    // let books: [Book]
+    let books: [FavBook]
     let totalItems: Int
     let kind: String
     private enum CodingKeys: String, CodingKey {

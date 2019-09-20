@@ -11,10 +11,9 @@ import UIKit
 class ViewController: UIViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
-    var viewModel = ViewModel.shared
+    var viewModel = ViewModel()
     
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

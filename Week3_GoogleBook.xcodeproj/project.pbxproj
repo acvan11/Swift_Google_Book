@@ -25,6 +25,9 @@
 		331D441F23349ED300DC14A0 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D441E23349ED300DC14A0 /* FavoriteViewController.swift */; };
 		33899F3D2334B7C60021A445 /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F3C2334B7C60021A445 /* FavoriteCollectionCell.swift */; };
 		33899F3F2334BD790021A445 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F3E2334BD790021A445 /* CoreManager.swift */; };
+		33899F852335472E0021A445 /* FavBook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F832335472E0021A445 /* FavBook+CoreDataClass.swift */; };
+		33899F862335472E0021A445 /* FavBook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F842335472E0021A445 /* FavBook+CoreDataProperties.swift */; };
+		33899F8823354BA20021A445 /* FavBook+GetImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F8723354BA20021A445 /* FavBook+GetImages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		331D441E23349ED300DC14A0 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		33899F3C2334B7C60021A445 /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
 		33899F3E2334BD790021A445 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
+		33899F832335472E0021A445 /* FavBook+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavBook+CoreDataClass.swift"; sourceTree = "<group>"; };
+		33899F842335472E0021A445 /* FavBook+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavBook+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33899F8723354BA20021A445 /* FavBook+GetImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavBook+GetImages.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				331D43A8232FDF8A00DC14A0 /* Book.swift */,
+				33899F832335472E0021A445 /* FavBook+CoreDataClass.swift */,
+				33899F842335472E0021A445 /* FavBook+CoreDataProperties.swift */,
+				33899F8723354BA20021A445 /* FavBook+GetImages.swift */,
 				331D4381232F1FAA00DC14A0 /* Week3_GoogleBook.xcdatamodeld */,
 			);
 			path = Model;
@@ -294,12 +303,15 @@
 				331D43A5232FDEBA00DC14A0 /* BookService.swift in Sources */,
 				331D43A9232FDF8A00DC14A0 /* Book.swift in Sources */,
 				331D43AD232FE7CA00DC14A0 /* BookTableCell.swift in Sources */,
+				33899F8823354BA20021A445 /* FavBook+GetImages.swift in Sources */,
 				331D43A3232FDC7D00DC14A0 /* BookAPI.swift in Sources */,
+				33899F852335472E0021A445 /* FavBook+CoreDataClass.swift in Sources */,
 				331D4383232F1FAA00DC14A0 /* Week3_GoogleBook.xcdatamodeld in Sources */,
 				33899F3D2334B7C60021A445 /* FavoriteCollectionCell.swift in Sources */,
 				331D43B0232FEE5500DC14A0 /* ViewModel.swift in Sources */,
 				331D44192334911600DC14A0 /* DetailViewController.swift in Sources */,
 				331D441D2334944A00DC14A0 /* ViewController+Extension.swift in Sources */,
+				33899F862335472E0021A445 /* FavBook+CoreDataProperties.swift in Sources */,
 				331D437B232F1FAA00DC14A0 /* AppDelegate.swift in Sources */,
 				331D441F23349ED300DC14A0 /* FavoriteViewController.swift in Sources */,
 				331D43B3232FEEE600DC14A0 /* Notification+Name.swift in Sources */,

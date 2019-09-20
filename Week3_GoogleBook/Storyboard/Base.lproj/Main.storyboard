@@ -177,6 +177,9 @@
                         <viewLayoutGuide key="safeArea" id="e1c-Vr-wos"/>
                     </view>
                     <navigationItem key="navigationItem" id="84j-Vs-vCi"/>
+                    <connections>
+                        <outlet property="favoriteCollectionView" destination="S2q-bn-ZoK" id="NCb-CC-p5d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vkv-Rg-8zL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -274,6 +277,9 @@
                                 <state key="normal" title="Like">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="favButtonTapped:" destination="xBn-x6-3wy" eventType="touchUpInside" id="vei-kb-fgS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -300,6 +306,7 @@
                         <outlet property="bookDescription" destination="725-w9-DAN" id="Tzq-ad-4Rr"/>
                         <outlet property="bookImage" destination="4ZF-vf-sD7" id="rfW-5l-MHb"/>
                         <outlet property="bookTitle" destination="wak-L3-tgk" id="0IF-Ja-KLy"/>
+                        <outlet property="favButton" destination="Phi-pc-Knv" id="hFi-dR-VsT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctc-r0-O9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
