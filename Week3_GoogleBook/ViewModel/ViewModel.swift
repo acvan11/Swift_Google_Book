@@ -12,8 +12,14 @@ protocol ViewModelDelegate: class {
     func update()
 }
 
+protocol FavoriteDelegate: class {
+    func update()
+}
+
 final class ViewModel {
     weak var delegate: ViewModelDelegate?
+    weak var favdelegate: FavoriteDelegate?
+    
     static let shared = ViewModel()
     private init() {}
     
@@ -26,6 +32,12 @@ final class ViewModel {
         
     }
     
+    var favbooks = [Book]() {
+        didSet {
+            favdelegate?.update()
+        }
+    }
+    
     var book: Book!
     
     func get(search: String) {
@@ -35,5 +47,21 @@ final class ViewModel {
             
             
         }
+    }
+    
+    func getFav() {
+        CoreManager.shared.load() { [weak self] bookss in
+            self?.favbooks = bookss
+            print("Total favorite books: \(favbooks.count)")
+            
+        }
+    }
+    
+    func favorite(book: Book) {
+        CoreManager.shared.save(book)
+    }
+    
+    func unfav(book: Book) {
+        CoreManager.shared.save(book)
     }
 }

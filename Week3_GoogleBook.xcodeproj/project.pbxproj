@@ -24,6 +24,7 @@
 		331D441D2334944A00DC14A0 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D441C2334944A00DC14A0 /* ViewController+Extension.swift */; };
 		331D441F23349ED300DC14A0 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331D441E23349ED300DC14A0 /* FavoriteViewController.swift */; };
 		33899F3D2334B7C60021A445 /* FavoriteCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F3C2334B7C60021A445 /* FavoriteCollectionCell.swift */; };
+		33899F3F2334BD790021A445 /* CoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33899F3E2334BD790021A445 /* CoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		331D441C2334944A00DC14A0 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		331D441E23349ED300DC14A0 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		33899F3C2334B7C60021A445 /* FavoriteCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionCell.swift; sourceTree = "<group>"; };
+		33899F3E2334BD790021A445 /* CoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,6 @@
 				331D437A232F1FAA00DC14A0 /* AppDelegate.swift */,
 				331D4386232F1FAB00DC14A0 /* LaunchScreen.storyboard */,
 				331D4389232F1FAB00DC14A0 /* Info.plist */,
-				331D4381232F1FAA00DC14A0 /* Week3_GoogleBook.xcdatamodeld */,
 			);
 			path = Week3_GoogleBook;
 			sourceTree = "<group>";
@@ -127,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				331D43A8232FDF8A00DC14A0 /* Book.swift */,
+				331D4381232F1FAA00DC14A0 /* Week3_GoogleBook.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +166,7 @@
 			children = (
 				331D43A2232FDC7D00DC14A0 /* BookAPI.swift */,
 				331D43A4232FDEBA00DC14A0 /* BookService.swift */,
+				33899F3E2334BD790021A445 /* CoreManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33899F3F2334BD790021A445 /* CoreManager.swift in Sources */,
 				331D437D232F1FAA00DC14A0 /* ViewController.swift in Sources */,
 				331D43A5232FDEBA00DC14A0 /* BookService.swift in Sources */,
 				331D43A9232FDF8A00DC14A0 /* Book.swift in Sources */,
